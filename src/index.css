@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.button-edit {
+    color: white;
+    background-color: green;
+    border-radius: 20%;
+    margin-right: 5px;
+}
+
+.button-delete {
+    color: white;
+    background-color: red;
+    border-radius: 20%;
+}
