@@ -1,24 +1,28 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const CosmonautTableBody = (props) => {
     return (
         <tbody>
-            <tr>
-                <td>A</td>
-                <td>A</td>
-                <td>A</td>
-                <td>A</td>
-                <td>
-                    <button className="button-edit" type="button">Edit</button>
-                    <button className="button-delete" type="button">Delete</button>
-                </td>
-            </tr>
+            {props.cosmonauts.map((cosmonaut, index) => {
+                return (
+                    <tr key={index}>
+                        <td>{cosmonaut.name}</td>
+                        <td>{cosmonaut.surname}</td>
+                        <td>{cosmonaut.birth}</td>
+                        <td>{cosmonaut.superpower}</td>
+                        <td>
+                            <button className="button-edit" type="button">Edit</button>
+                            <button className="button-delete" type="button" onClick={() => props.removeCosmonaut(index)}>Delete</button>
+                        </td>
+                    </tr>
+                )
+            })}
         </tbody>
     )
 }
 
 
-const CosmonautTableHeader = (props) => {
+const CosmonautTableHeader = () => {
     return (
         <thead>
             <tr>
@@ -32,15 +36,13 @@ const CosmonautTableHeader = (props) => {
 }
 
 
-class CosmonautTable extends Component {
-    render() {
-        return (
-            <table>
-                <CosmonautTableHeader />
-                <CosmonautTableBody />
-            </table>
-        )
-    }
+const CosmonautTable = (props) => {
+    return (
+        <table>
+            <CosmonautTableHeader />
+            <CosmonautTableBody cosmonauts={props.cosmonauts} removeCosmonaut={props.removeCosmonaut} />
+        </table>
+    )
 }
 
 export default CosmonautTable
