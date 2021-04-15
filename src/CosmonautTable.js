@@ -9,7 +9,7 @@ const CosmonautTableBody = (props) => {
                         <td>{cosmonaut.name}</td>
                         <td>{cosmonaut.surname}</td>
                         <td>{cosmonaut.birth}</td>
-                        <td>{cosmonaut.superpower}</td>
+                        <td>{cosmonaut.superpower ? cosmonaut.superpower : "none"}</td>
                         <td>
                             <button className="button-edit" type="button">Edit</button>
                             <button className="button-delete" type="button" onClick={() => props.removeCosmonaut(index)}>Delete</button>
@@ -38,7 +38,7 @@ const CosmonautTableHeader = () => {
 
 const CosmonautTable = (props) => {
     return (
-        <table>
+        <table className="cosmonaut-table">
             <CosmonautTableHeader />
             <CosmonautTableBody cosmonauts={props.cosmonauts} removeCosmonaut={props.removeCosmonaut} />
         </table>

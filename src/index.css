@@ -8,8 +8,18 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app {
+    width: 600px;
+    margin: 60px auto auto auto;
+}
+
+@media (max-width:480px) {
+    .app {
+        width: 480px;
+    }
 }
 
 .button-edit {
@@ -26,11 +36,12 @@ code {
 }
 
 .form-add-cosmonaut {
+    width: inherit;
     display: grid;
-    grid-template-columns: [labels] auto [fields] 2fr;
+    grid-template-columns: [labels] 1fr [fields] 3fr;
     grid-auto-flow: row;
     grid-gap: .8em;
-    background: #eee;
+    background-color: #eee;
     padding: 1.2em;
 }
 
@@ -54,4 +65,23 @@ code {
     position: relative;
     left: 50%;
     top: 20%;
+}
+
+.form-cosmonaut-div {
+    font-weight: bold;
+}
+
+.form-cosmonaut-error {
+    background-color: #fc7272;
+}
+
+.cosmonaut-table {
+    width: inherit;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border: 1px groove grey;
+}
+
+td {
+    word-break: break-all;
 }

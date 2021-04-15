@@ -25,17 +25,17 @@ class App extends Component {
 
 
     removeCosmonaut = (index) => {
-        this.setState({
-            cosmonauts: cosmonauts.filter((cosmonaut, i) => {
+        this.setState(currentState => ({
+            cosmonauts: currentState.cosmonauts.filter((cosmonaut, i) => {
                 return i !== index
             })
-        })
+        }))
     }
 
 
     render() {
         return (
-            <div className="App">
+            <div className="app">
                 <CosmonautForm handleCosmonautFormSubmit={this.handleCosmonautFormSubmit} />
                 <CosmonautTable cosmonauts={this.state.cosmonauts} removeCosmonaut={this.removeCosmonaut} />
             </div>
