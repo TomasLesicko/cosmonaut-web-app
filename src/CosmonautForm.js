@@ -37,24 +37,16 @@ class CosmonautForm extends Component {
         const {name, surname, birth, superpower} = this.state
 
         return (
-            <div className="cosmonautFormDiv">Add Cosmonaut
-                <form>
-                    <label htmlFor="name">Name
+            <div className="cosmonautFormDiv">
+                <form className="form-add-cosmonaut">
+                    <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="name" value={name} onChange={this.handleAddCosmonautChange} ></input>
-                    </label>
-                    <br/>
-                    <label htmlFor="surame">Surame
+                    <label htmlFor="surame">Surame</label>
                         <input type="text" name="surname" id="surname" value={surname} onChange={this.handleAddCosmonautChange} ></input>
-                    </label>
-                    <br/>
-                    <label htmlFor="birth">Date of birth
+                    <label htmlFor="birth">Date of birth</label>
                         <input type="date" name="birth" id="birth" value={birth} onChange={this.handleAddCosmonautChange} ></input>
-                    </label>
-                    <br/>
-                    <label htmlFor="superpower">Superpower
+                    <label htmlFor="superpower">Superpower</label>
                         <input type="text" name="superpower" id="superpower" value={superpower} onChange={this.handleAddCosmonautChange} ></input>
-                    </label>
-                    <br />
                     <input type="button" value="Add cosmonaut" onClick={this.onCosmonautFormSubmit}/>
                 </form>
             </div>
