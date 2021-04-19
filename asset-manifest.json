@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/TomasLesicko/cosmonaut-web-app/static/css/main.4e9cafa0.chunk.css",
-    "main.js": "/TomasLesicko/cosmonaut-web-app/static/js/main.fbe51178.chunk.js",
-    "main.js.map": "/TomasLesicko/cosmonaut-web-app/static/js/main.fbe51178.chunk.js.map",
-    "runtime-main.js": "/TomasLesicko/cosmonaut-web-app/static/js/runtime-main.9b011d36.js",
-    "runtime-main.js.map": "/TomasLesicko/cosmonaut-web-app/static/js/runtime-main.9b011d36.js.map",
-    "static/js/2.2b0f01ce.chunk.js": "/TomasLesicko/cosmonaut-web-app/static/js/2.2b0f01ce.chunk.js",
-    "static/js/2.2b0f01ce.chunk.js.map": "/TomasLesicko/cosmonaut-web-app/static/js/2.2b0f01ce.chunk.js.map",
-    "static/js/3.66ac4c7d.chunk.js": "/TomasLesicko/cosmonaut-web-app/static/js/3.66ac4c7d.chunk.js",
-    "static/js/3.66ac4c7d.chunk.js.map": "/TomasLesicko/cosmonaut-web-app/static/js/3.66ac4c7d.chunk.js.map",
-    "index.html": "/TomasLesicko/cosmonaut-web-app/index.html",
-    "static/css/main.4e9cafa0.chunk.css.map": "/TomasLesicko/cosmonaut-web-app/static/css/main.4e9cafa0.chunk.css.map",
-    "static/js/2.2b0f01ce.chunk.js.LICENSE.txt": "/TomasLesicko/cosmonaut-web-app/static/js/2.2b0f01ce.chunk.js.LICENSE.txt"
+    "main.css": "/cosmonaut-web-app/static/css/main.4e9cafa0.chunk.css",
+    "main.js": "/cosmonaut-web-app/static/js/main.fbe51178.chunk.js",
+    "main.js.map": "/cosmonaut-web-app/static/js/main.fbe51178.chunk.js.map",
+    "runtime-main.js": "/cosmonaut-web-app/static/js/runtime-main.e5bf783f.js",
+    "runtime-main.js.map": "/cosmonaut-web-app/static/js/runtime-main.e5bf783f.js.map",
+    "static/js/2.2b0f01ce.chunk.js": "/cosmonaut-web-app/static/js/2.2b0f01ce.chunk.js",
+    "static/js/2.2b0f01ce.chunk.js.map": "/cosmonaut-web-app/static/js/2.2b0f01ce.chunk.js.map",
+    "static/js/3.66ac4c7d.chunk.js": "/cosmonaut-web-app/static/js/3.66ac4c7d.chunk.js",
+    "static/js/3.66ac4c7d.chunk.js.map": "/cosmonaut-web-app/static/js/3.66ac4c7d.chunk.js.map",
+    "index.html": "/cosmonaut-web-app/index.html",
+    "static/css/main.4e9cafa0.chunk.css.map": "/cosmonaut-web-app/static/css/main.4e9cafa0.chunk.css.map",
+    "static/js/2.2b0f01ce.chunk.js.LICENSE.txt": "/cosmonaut-web-app/static/js/2.2b0f01ce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9b011d36.js",
+    "static/js/runtime-main.e5bf783f.js",
     "static/js/2.2b0f01ce.chunk.js",
     "static/css/main.4e9cafa0.chunk.css",
     "static/js/main.fbe51178.chunk.js"
