@@ -1,0 +1,8 @@
+{
+  "Cosmonaut": {
+    "name": "string",
+    "surname": "string",
+    "birth": "date",
+    "superpower":  "string"
+  }
+}
