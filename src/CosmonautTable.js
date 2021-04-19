@@ -29,6 +29,7 @@ const CosmonautTableHeader = () => {
                 <th>Surname</th>
                 <th>Date of birth</th>
                 <th>Superpower</th>
+                <th></th>
             </tr>
         </thead>
     )

@@ -10,6 +10,7 @@ class CosmonautForm extends Component {
         this.onCosmonautFormSubmit = this.onCosmonautFormSubmit.bind(this)
         this.validateField = this.validateField.bind(this)
         this.validateForm = this.validateForm.bind(this)
+        this.submit = this.submit.bind(this)
     }
 
 
@@ -37,6 +38,7 @@ class CosmonautForm extends Component {
     onCosmonautFormSubmit = () => {
         this.props.handleCosmonautFormSubmit(this.state)
         this.setState(this.emptyFormState)
+        //this.submit() no POST on mockend
     }
 
 
@@ -84,6 +86,24 @@ class CosmonautForm extends Component {
     }
 
 
+    submit = () => {
+        const { name, surname, birth, superpower } = this.state
+        fetch('/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                surname: surname,
+                birth: birth,
+                superpower: superpower,
+            }),
+        })
+    }
+
+
     render() {
         const { name, surname, birth, superpower } = this.state
 
@@ -98,7 +118,7 @@ class CosmonautForm extends Component {
                         <input type="date" name="birth" id="birth" value={birth} onChange={this.handleAddCosmonautChange} ></input>
                     <label htmlFor="superpower">Superpower</label>
                     <input type="text" name="superpower" id="superpower" value={superpower} onChange={this.handleAddCosmonautChange} ></input>
-                    <input type="button" value="Add cosmonaut" disabled={!this.state.formValid} onClick={this.onCosmonautFormSubmit} />
+                    <button type="submit" value="Add cosmonaut" disabled={!this.state.formValid} onClick={this.onCosmonautFormSubmit} >Add cosmonaut</button>
                 </form>
                 <FormErrors errors={this.state.formErrors} />
             </div>

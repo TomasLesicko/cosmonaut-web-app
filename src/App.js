@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css';
-import cosmonauts from './cosmonauts'
 import CosmonautTable from './CosmonautTable'
 import CosmonautForm from './CosmonautForm'
 
@@ -9,7 +8,7 @@ class App extends Component {
         super(props)
 
         this.state = {
-            cosmonauts: cosmonauts,
+            cosmonauts: [],
         }
 
         this.handleCosmonautFormSubmit = this.handleCosmonautFormSubmit.bind(this)
@@ -21,6 +20,34 @@ class App extends Component {
         this.setState({
             cosmonauts: [...this.state.cosmonauts, cosmonaut]
         })
+    }
+
+
+    componentDidMount() {
+        fetch('https://mockend.com/TomasLesicko/cosmonaut-web-app/cosmonauts')
+            .then((res) => res.json())
+            .then((data) => {
+
+                this.setState({
+                    cosmonauts: data.map((cosmonaut) => {
+                        return {
+                            name: cosmonaut.name,
+                            surname: cosmonaut.surname,
+                            birth: this.formatDate(cosmonaut.birth),
+                            superpower: cosmonaut.superpower,
+                        }
+                    })
+                })
+            })
+            .catch((error) => (console.log(error)))
+    }
+
+
+    formatDate(dateString) {
+        const date = new Date(dateString)
+        const result = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+
+        return result
     }
 
 
